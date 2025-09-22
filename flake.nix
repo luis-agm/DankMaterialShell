@@ -57,7 +57,7 @@
             cfg = config.programs.dankMaterialShell;
             inherit (lib.types) bool;
         in {
-            imports = [./niri.nix];
+            # imports = [./niri.nix]; # Without this, it works for me.
 
             options.programs.dankMaterialShell = {
                 enable = lib.mkEnableOption "DankMaterialShell";
